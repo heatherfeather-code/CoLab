@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoLab: Schedule</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style/schedule.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     
 </head>
 <body>
     <a href="index.html"><h1>CoLab</h1></a>
     <header class="header">
         <button class="menu-icon" id="menuIcon">&#9776;</button>
+        <i class="fa-solid fa-bars"></i>
         <div class="nav-dropdown" id="navMenu">
             <!-- <a href="index.html">Schedule</a> -->
             <a href="tasks.html">Tasks</a>
@@ -18,38 +21,53 @@
           </div>
           
       </header>
-    <h1>Schedule</h1>
 
+
+   <!-- Icon for user profile -->
+   <i class="fa-solid fa-user"></i>
+   <div class="app-container">
    
 
+    <nav class="top-bar">
+      <div class="menu-icon">☰</div>
+      <div class="profile-icon">👤</div>
+    </nav>
 
-    <!-- Calendar -->
-    <div class="calendar">
-        <div class="day active">M</div>
-        <div class="day">T</div>
-        <div class="day">W</div>
-        <div class="day">T</div>
-        <div class="day">F</div>
-        <div class="day">S</div>
-        <div class="day">S</div>
-    </div>
+    <section class="weekdays">
+      <div>M<br>14</div>
+      <div>T<br>15</div>
+      <div>W<br>16</div>
+      <div>T<br>17</div>
+      <div>F<br>18</div>
+    </section>
 
+    <main class="events">
+      <h2>Friday</h2>
+      <p class="upcoming">Upcoming Events</p>
 
-    <!-- Schedule Content -->
-
-
-    <div class="schedule">
-        <h2>Monday</h2>
-        <div>
-            <span>2:30pm</span>
-            <div class="event-card"> Task 1 due</div>
+      <div class="event blue">
+        <span class="time">2:30 PM</span>
+        <div class="event-card">
+          Task 1 due
         </div>
+      </div>
 
-        <div class="event">
-            <span>7:30 PM</span>
-            <div class="event-card">Task 2 due</div>
-          </div>
-    </div>
+      <div class="event red">
+        <span class="time">5:00 PM</span>
+        <div class="event-card">
+          Project 1 due
+        </div>
+        <div class="event-card">
+          Project 2 due
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+
+
+    <p>This page is a static example of a prototype for CoLab. </p>
     <script src="schedule.js"></script>
 </body>
 </html>

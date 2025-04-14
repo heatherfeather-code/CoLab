@@ -2,6 +2,7 @@
 body{
    font-family:'Inter', sans-serif;
    font-weight:600;
+   /* background-color: #1F299C; */
 
 }
 a{
@@ -20,7 +21,9 @@ p{
 }
 
 /* Styling for Index Page */
-
+#welcome{
+  /* background-color:pink; */
+}
 .startBtn{
     font-weight:400;
     font-size:14px;
@@ -106,17 +109,9 @@ p{
     border-radius: 10px;
   }
   
-  .day {
-    padding: 10px 15px;
-    background: #bbb;
-    border-radius: 5px;
-    cursor: pointer;
-  }
   
-  .day.active {
-    background: black;
-    color: white;
-  }
+  
+ 
   
   /* === Schedule Events === */
   .schedule {
@@ -140,3 +135,6 @@ p{
 
 
 /* MEDIA QUERIES */
+@media screen (max-width: ){
+    
+}

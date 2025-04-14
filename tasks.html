@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Tasks</title>
+  <link rel="stylesheet" href="style/tasks.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="menu-icon">☰</div>
+    <h1>Your Tasks</h1>
+    <div class="profile-icon">👤</div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active">All Tasks</button>
+    <button class="tab">High priority</button>
+    <button class="tab">Due Soon</button>
+    <button class="tab">Projects</button>
+    <button id="newTaskButton" class="new-task-button">+</button>
+  </nav>
+
+  <main>
+    <section class="task-section">
+      <h2>Upcoming Tasks</h2>
+
+      <div class="task-card">
+        <div class="task-left">
+          <input type="checkbox">
+          <div class="task-info">
+            <h3>Prepare presentation</h3>
+            <p>May 10 <span class="priority high">High</span></p>
+            <p>Project: CoLab</p>
+          </div>
+        </div>
+        <div class="avatars">
+          <img src="avatar1.png" alt="avatar" class="avatar">
+        </div>
+      </div>
+
+      <div class="task-card">
+        <div class="task-left">
+          <input type="checkbox">
+          <div class="task-info">
+            <h3>Update website</h3>
+            <p>May 14 <span class="priority low">Low</span></p>
+            <p>Project: CoLab</p>
+          </div>
+        </div>
+        <div class="avatars">
+          <img src="avatar2.png" alt="avatar" class="avatar">
+          <img src="avatar3.png" alt="avatar" class="avatar">
+        </div>
+      </div>
+
+      <div class="task-card">
+        <div class="task-left">
+          <input type="checkbox">
+          <div class="task-info">
+            <h3>Run testing</h3>
+            <p>June 16 <span class="priority high">High</span></p>
+            <p>Project: Product</p>
+          </div>
+        </div>
+        <div class="avatars">
+          <img src="avatar4.png" alt="avatar" class="avatar">
+        </div>
+      </div>
+    </section>
+
+    <section class="task-section">
+      <h2>Completed Tasks</h2>
+
+      <div class="task-card completed">
+        <div class="task-left">
+          <input type="checkbox" checked>
+          <div class="task-info">
+            <h3>Research</h3>
+            <p>May 6 <span class="priority high">High</span></p>
+            <p>Project: CoLab</p>
+          </div>
+        </div>
+        <div class="avatars">
+          <img src="avatar5.png" alt="avatar" class="avatar">
+        </div>
+      </div>
+
+      <div class="task-card completed">
+        <div class="task-left">
+          <input type="checkbox" checked>
+          <div class="task-info">
+            <h3>Copy writing</h3>
+            <p>May 1 <span class="priority low">Low</span></p>
+          </div>
+        </div>
+        <div class="avatars">
+          <img src="avatar5.png" alt="avatar" class="avatar">
+        </div>
+      </div>
+      <button id="openModalButton" class="big-new-task-button">New Task</button>
+    </section>
+
+    
+  </main>
+
+  <!-- Modal -->
+  <div id="taskModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2>New Task</h2>
+      <form id="taskForm">
+        <input type="text" id="taskName" placeholder="Task name" required>
+
+        <label for="taskPriority">Priority</label>
+        <select id="taskPriority" required>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+
+        <label for="taskDate">Due date</label>
+        <input type="date" id="taskDate" required>
+
+        <label for="taskProject">Add to project</label>
+        <select id="taskProject" required>
+          <option value="No">No</option>
+          <option value="CoLab">CoLab</option>
+          <option value="Product">Product</option>
+        </select>
+
+        <label>Assign to</label>
+        <div class="assign-to">
+          <label><input type="checkbox" name="assignee" value="Jane Doe"> Jane Doe</label>
+          <label><input type="checkbox" name="assignee" value="Rishabh"> Rishabh</label>
+        </div>
+
+        <button type="submit" class="create-button">Create</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="tasks.js"></script>
+</body>
+</html>
